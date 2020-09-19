@@ -1,0 +1,15 @@
+.home {
+  display: flex;
+  max-width: 1330px;
+  margin: 0 auto;
+  padding: 0 15px;
+  height: 100vh;
+  overflow-y: scroll;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
