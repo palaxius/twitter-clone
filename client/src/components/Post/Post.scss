@@ -54,6 +54,16 @@
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+    margin-right: 70px;
+
+    &-icon {
+      cursor: pointer;
+      transition: color .2s ease-in !important;
+
+      &:hover {
+        color: var(--twitter-color)
+      }
+    }
   }
 
   &__badge {

@@ -1,0 +1,19 @@
+
+
+.login-modal {
+  text-align: center;
+}
+
+.login__closeBtn {
+  position: absolute;
+  color: var(--twitter-color) !important;
+  right: 11px;
+  top: 11px;
+  font-size: 30px !important;
+  transition: all .3s ease-in-out !important;
+}
+
+.login__closeBtn:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}

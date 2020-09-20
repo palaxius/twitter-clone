@@ -1,3 +1,131 @@
-.login {
+.wrapper {
+  display: flex;
+  height: 100vh;
+}
 
+.leftSide {
+  background-color: #71C9F8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0.5;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+
+    li {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__text {
+    font-weight: 700 !important;
+    font-size: 14px !important;
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    font-size: 28px !important;
+    margin-right: 13px;
+  }
+}
+
+.rightSide {
+  flex: 0.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__wrapper {
+    width: 390px;
+  }
+
+  &__title {
+    font-weight: 700 !important;
+    font-size: 32px !important;
+    margin-bottom: 40px !important;
+  }
+
+  &__text {
+    font-size: 15px !important;
+    font-weight: 700 !important;
+  }
+}
+
+.signup-btn,
+.login-btn {
+  font-weight: 700 !important;
+  text-transform: inherit !important;
+  border-radius: 30px !important;
+  height: 40px !important;
+  margin-top: 15px !important;
+  transition: all .2s ease-in;
+}
+
+.signup-btn__wrapper {
+
+}
+
+.signup-btn {
+  background-color: var(--twitter-color) !important;
+  color: #fff !important;
+  border: none !important;
+
+  &:hover {
+    background-color: #49a2d8 !important;
+  }
+}
+
+.login-btn {
+  background-color: #fff !important;
+  color: var(--twitter-color) !important;
+  border: 1px solid  var(--twitter-color) !important;
+}
+
+.twitter__icon {
+  font-size: 3rem !important;
+  color: #1DA1F2;
+  margin-bottom: 20px;
+}
+
+.twitter__bigIcon {
+  position: absolute;
+  color: #1DA1F2;
+  left: 76%;
+  top: 42%;
+  transform: translate(-50%, -50%);
+  width: 190% !important;
+  height: 190% !important;
+}
+
+.loginField {
+  margin-bottom: 10px !important;
+}
+
+.registerField {
+  margin-bottom: 20px !important;
+}
+
+.signup-btn__wrapper {
+  width: 100%;
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+
+  .signup-btn {
+    .MuiButton-label {
+      padding: 15px;
+    }
+  }
+}
+
+.formControl {
+  margin-bottom: 15px !important;
 }

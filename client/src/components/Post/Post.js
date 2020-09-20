@@ -30,10 +30,10 @@ const Post = ({displayName, username, verified, text, image, avatar}) => {
         </div>
         <img src="https://cdn.jpegmini.com/user/images/slider_puffin_jpegmini_mobile.jpg" alt="post-image"/>
         <div className="post__footer">
-          <ChatBubbleOutlineIcon fontSize='small'/>
-          <RepeatIcon fontSize='small'/>
-          <FavoriteBorderIcon fontSize='small'/>
-          <PublishIcon fontSize='small'/>
+          <ChatBubbleOutlineIcon fontSize='small' className='post__footer-icon'/>
+          <RepeatIcon fontSize='small' className='post__footer-icon'/>
+          <FavoriteBorderIcon fontSize='small' className='post__footer-icon'/>
+          <PublishIcon fontSize='small' className='post__footer-icon'/>
         </div>
       </div>
     </div>
