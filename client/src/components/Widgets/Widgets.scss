@@ -1,5 +1,9 @@
 .widgets {
-  flex: 0.3;
+  flex: 0.35;
+  position: sticky;
+  top: 0;
+  overflow-y: scroll;
+  height: 100vh;
 
   &__input {
     display: flex;
@@ -13,6 +17,9 @@
     input {
       border: none;
       background-color: var(--twitter-background);
+      outline: none;
+      width: 100%;
+      padding: 5px 25px 5px 5px;
     }
   }
 
@@ -28,9 +35,51 @@
     border-radius: 20px;
 
     h2 {
-      font-size: 18px;
+      font-size: 20px;
+      font-weight: 800;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.widgets__trends {
+  padding-top: 5px;
+  margin-bottom: 30px;
+  background-color: transparent !important;
+
+  &-header {
+    padding: 13px 18px;
+    background-color: transparent !important;
+
+    h2 {
+      font-size: 20px;
       font-weight: 800;
     }
   }
 }
 
+.MuiTypography-body1 {
+  font-weight: 800 !important;
+  margin-bottom: 10px !important;
+}
+
+.MuiTypography-body2 {
+  color: #8695A1;
+}
+
+.widgets__trends-text {
+  white-space: nowrap;
+  max-width: 300px;
+  overflow: hidden;
+
+  span {
+    margin: 0 !important;
+  }
+}
+
+.MuiPaper-elevation1 {
+  box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.2), 0px 0px 0px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12) !important;
+}

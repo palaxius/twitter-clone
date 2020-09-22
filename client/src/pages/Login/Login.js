@@ -76,7 +76,12 @@ const Login = () => {
               Log in
             </Button>
 
-            <Modal title='Log in to Twitter' modalOpen={modalOpen === 'login'} onClose={handleCloseModal}>
+            <Modal
+              title='Log in to Twitter'
+              modalOpen={modalOpen === 'login'}
+              onClose={handleCloseModal}
+              logo
+            >
               <FormControl className='formControl' component='fieldset' fullWidth>
                 <FormGroup aria-label='position' row>
                   <TextField
@@ -114,7 +119,12 @@ const Login = () => {
               </FormControl>
             </Modal>
 
-            <Modal title='Create your account' modalOpen={modalOpen === 'signIn'} onClose={handleCloseModal}>
+            <Modal
+              title='Create your account'
+              modalOpen={modalOpen === 'signIn'}
+              onClose={handleCloseModal}
+              logo
+            >
               <FormControl className='formControl' component='fieldset' fullWidth>
                 <FormGroup aria-label='position' row>
                   <TextField

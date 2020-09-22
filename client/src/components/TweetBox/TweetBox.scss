@@ -1,6 +1,6 @@
 .tweetBox {
   padding-bottom: 10px;
-  border-bottom: 8px solid var(--twitter-background);
+  //border-bottom: 8px solid var(--twitter-background);
   padding-right: 10px;
 
   form {
@@ -9,18 +9,17 @@
   }
 
   &__input {
-    padding: 20px;
+    padding: 20px 20px 20px 5px;
     display: flex;
+    align-items: center;
+    width: 100%;
 
-    input {
+    &-textarea {
       flex: 1;
-      margin-left: 20px;
       font-size: 20px;
       border: none;
       outline: none;
-      //user-select: text;
-      //white-space: pre-wrap;
-      //overflow-wrap: break-word;
+      resize: none;
     }
   }
 
@@ -32,19 +31,66 @@
     text-transform: inherit !important;
     border-radius: 30px !important;
     height: 40px !important;
-    margin-top: 20px !important;
     width: 80px;
     transition: all .2s ease-in;
-    margin-left: auto !important;
+    margin: 0 10px 0 auto !important;
 
     &:hover {
       background-color: #49a2d8 !important;
     }
   }
+
+  &__header {
+    display: flex;
+
+    &-avatar {
+      height: 55px !important;
+      width: 55px !important;
+      object-fit: contain !important;
+      padding: 15px;
+    }
+  }
 }
 
-.tweetBox__input-image {
-  border: none;
-  padding: 10px 10px 0 25px ;
-  outline: none;
+.tweetBox__footer {
+  margin-left: 68px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &-icon {
+    font-size: 26px !important;
+    color: var(--twitter-color) !important;
+  }
 }
+
+.tweetBox__footer-right {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.progress-counter {
+  margin-right: 10px;
+}
+
+.circular-progress {
+  align-items: center;
+  display: flex;
+  margin-right: 15px;
+}
+
+.MuiCircularProgress-root + .MuiCircularProgress-root {
+  position: absolute;
+}
+
+
+button:disabled {
+  background-color: #cccccc !important;
+  color: #666666 !important;
+}
+
+.MuiButton-root.Mui-disabled {
+  color: rgba(0, 0, 0, 0.26) !important;
+}
+

@@ -7,25 +7,26 @@ import RepeatIcon from '@material-ui/icons/Repeat';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import PublishIcon from '@material-ui/icons/Publish';
 
-const Post = ({displayName, username, verified, text, image, avatar}) => {
+const Post = ({text, user}) => {
   return (
     <div className='post'>
       <div className="post__avatar">
-        <Avatar src='https://asia.ifoam.bio/wp-content/uploads/2018/12/avatar__181424.png'/>
+        <Avatar src={user.avatarUrl} />
       </div>
       <div className="post__body">
         <div className="post__header">
           <div className="post__header-text">
             <h3>
-              Avtushenko Andrey{' '}
+              {user.name}
               <span className='post__header-username'>
-                <VerifiedUserIcon className='post__badge'/>
-                @palaxius
+                {user.verified && <VerifiedUserIcon className='post__badge'/>}
+                @{user.username}
               </span>
+              <span className='post__date'>12h</span>
             </h3>
           </div>
           <div className="post__header-description">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam doloribus harum recusandae.</p>
+            <p>{text}</p>
           </div>
         </div>
         <img src="https://cdn.jpegmini.com/user/images/slider_puffin_jpegmini_mobile.jpg" alt="post-image"/>

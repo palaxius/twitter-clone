@@ -11,13 +11,13 @@ import FormGroup from "@material-ui/core/FormGroup";
 import TextField from "@material-ui/core/TextField";
 import Dialog from "@material-ui/core/Dialog";
 
-const Modal = ({ title, children, modalOpen, onClose }) => {
+const Modal = ({ title, children, modalOpen, onClose, logo }) => {
 
   return modalOpen && (
     <Dialog open={modalOpen} onClose={onClose} className='login-modal'>
       <Close className='login__closeBtn' color='secondary' onClick={onClose}/>
       <DialogTitle>
-        <TwitterIcon className='twitter__icon' />
+        {logo && <TwitterIcon className='twitter__icon' />}
         <h2>{title}</h2>
       </DialogTitle>
       <DialogContent>

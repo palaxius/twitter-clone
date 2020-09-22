@@ -1,0 +1,138 @@
+{
+  "tweets": [
+    {
+      "_id": "5f68cfca0a0a698c8262c607",
+      "text": "Ipsum id reprehenderit voluptate cupidatat ea non nostrud. Anim quis cillum sint velit incididunt labore. Excepteur mollit ex ad consequat. Magna laboris in quis Lorem ad Lorem mollit magna tempor et elit. Incididunt officia quis sint fugiat aute ut culpa.",
+      "user": {
+        "name": "Roth Duran",
+        "verified": true,
+        "username": "santos",
+        "avatarUrl": "https://source.unsplash.com/random/100x100?2"
+      }
+    },
+    {
+      "_id": "5f68cfcaaa406740626a6a19",
+      "text": "Nostrud culpa ullamco sit pariatur laborum quis mollit. Nostrud et ea elit minim. Ad tempor nulla magna occaecat magna mollit est esse. Lorem ut ut nostrud enim quis. Mollit nostrud sit voluptate fugiat cupidatat do aliqua.",
+      "user": {
+        "name": "Kirk Gibbs",
+        "verified": false,
+        "username": "sheryl",
+        "avatarUrl": "https://source.unsplash.com/random/100x100?3"
+      }
+    },
+    {
+      "_id": "5f68cfcac92bff3ca384c2cd",
+      "text": "Lorem est reprehenderit id nulla incididunt nostrud nisi labore eiusmod consectetur amet enim elit. Do anim laboris do voluptate nulla. Eu consectetur quis deserunt ex eiusmod in nisi irure enim aute adipisicing dolore officia. Nisi fugiat laborum pariatur veniam sint. Nostrud nisi veniam irure excepteur reprehenderit consequat.",
+      "user": {
+        "name": "Georgette Obrien",
+        "verified": false,
+        "username": "kate",
+        "avatarUrl": "https://source.unsplash.com/random/100x100?3"
+      }
+    },
+    {
+      "_id": "5f68cfcaeecae778e60e643a",
+      "text": "Ad labore est Lorem eiusmod nostrud. Aliquip dolore magna quis consequat minim anim deserunt sit id reprehenderit sunt minim. Consequat adipisicing quis consectetur duis. Voluptate mollit ex et mollit culpa voluptate sunt. Do magna enim ut duis voluptate anim esse est commodo.",
+      "user": {
+        "name": "Tamra Johnston",
+        "verified": true,
+        "username": "barrera",
+        "avatarUrl": "https://source.unsplash.com/random/100x100?2"
+      }
+    },
+    {
+      "_id": "5f68cfcacaaf0b27fadd30a7",
+      "text": "Anim culpa ut quis magna ad anim veniam fugiat sint. Enim in elit ut enim velit aliqua. Ullamco non duis id Lorem ex exercitation labore sunt. Velit aute tempor dolor consequat occaecat irure do cillum officia enim ullamco voluptate velit. Elit cillum proident enim culpa duis velit incididunt culpa laborum deserunt consequat non eu.",
+      "user": {
+        "name": "Brandy Golden",
+        "verified": true,
+        "username": "ines",
+        "avatarUrl": "https://source.unsplash.com/random/100x100?1"
+      }
+    },
+    {
+      "_id": "5f68cfca8cea370dee02f5dc",
+      "text": "Proident voluptate laboris anim aliquip nulla incididunt eiusmod et ipsum dolor. Amet sunt dolore aliqua qui aliquip laborum in anim. Ullamco ea exercitation id nisi laborum in amet labore laboris quis dolore. Elit pariatur fugiat eiusmod reprehenderit labore eu mollit et velit deserunt. Esse Lorem nostrud qui anim occaecat labore aliqua.",
+      "user": {
+        "name": "Paul Mosley",
+        "verified": false,
+        "username": "tracie",
+        "avatarUrl": "https://source.unsplash.com/random/100x100?4"
+      }
+    },
+    {
+      "_id": "5f68cfca5c7cc83eeee0dde0",
+      "text": "Ex magna minim exercitation consequat labore anim tempor magna ex consectetur. Mollit consectetur pariatur duis labore et eiusmod non. Ipsum cupidatat culpa veniam exercitation labore voluptate culpa laboris enim pariatur aliqua labore labore quis. Nulla sint cillum ea occaecat sunt dolor ad laborum est. Quis nisi minim aliqua est id esse incididunt ex aliquip laboris.",
+      "user": {
+        "name": "Joyce Finley",
+        "verified": true,
+        "username": "howe",
+        "avatarUrl": "https://source.unsplash.com/random/100x100?4"
+      }
+    },
+    {
+      "_id": "5f68cfca24d662bcd940cde5",
+      "text": "Magna velit dolore eiusmod sunt dolor nostrud ad velit ex reprehenderit proident ullamco eiusmod est. Pariatur sunt quis et culpa nostrud. Deserunt mollit sunt quis magna dolor adipisicing ut nisi excepteur adipisicing voluptate commodo. Esse non enim amet commodo enim elit reprehenderit in tempor. Ullamco aute voluptate cupidatat eiusmod voluptate reprehenderit cillum magna do veniam.",
+      "user": {
+        "name": "Jo Manning",
+        "verified": true,
+        "username": "selma",
+        "avatarUrl": "https://source.unsplash.com/random/100x100?3"
+      }
+    },
+    {
+      "_id": "5f68cfca4ac97905a615bbf1",
+      "text": "Irure ut aliqua Lorem cupidatat enim dolore adipisicing anim id sunt laboris aute Lorem cillum. Qui voluptate in cupidatat eiusmod aliquip minim id excepteur ullamco. Ut eu laboris officia proident enim et cupidatat incididunt ea amet ad labore sint minim. In consectetur culpa in consequat pariatur ea officia. Adipisicing occaecat nisi dolor mollit adipisicing eu id.",
+      "user": {
+        "name": "Rebecca Brock",
+        "verified": true,
+        "username": "elba",
+        "avatarUrl": "https://source.unsplash.com/random/100x100?3"
+      }
+    },
+    {
+      "_id": "5f68cfcaf1105bcfd6a6b516",
+      "text": "Nostrud pariatur ut enim consequat nisi magna irure nulla ullamco eu labore eiusmod officia. Sit et anim est nulla. Ullamco eiusmod laborum velit Lorem laborum cillum dolore exercitation qui magna pariatur aliquip. Dolore adipisicing do esse tempor labore laborum duis. In aute officia reprehenderit non sunt qui dolore do eu ad Lorem consectetur incididunt.",
+      "user": {
+        "name": "Baker Harding",
+        "verified": false,
+        "username": "kim",
+        "avatarUrl": "https://source.unsplash.com/random/100x100?2"
+      }
+    }
+  ],
+  "trends": [
+    {"name":  "#WearAMask", "tweetCount":  15242},
+    {"name":  "WorldSkills Russia", "tweetCount":  5242},
+    {"name":  "Navalniy", "tweetCount":  6252},
+    {"name":  "#HandOffRussianHistory", "tweetCount":  1242},
+    {"name":  "Belarus", "tweetCount":  9123}
+  ],
+  "whoToFollow": [
+    {
+      "name": "Roth Duran",
+      "verified": true,
+      "username": "santos",
+      "avatarUrl": "https://source.unsplash.com/random/100x100?2"
+    },
+    {
+      "name": "Georgette Obrien",
+      "verified": false,
+      "username": "kate",
+      "avatarUrl": "https://source.unsplash.com/random/100x100?3"
+    },
+    {
+      "name": "Paul Mosley",
+      "verified": false,
+      "username": "tracie",
+      "avatarUrl": "https://source.unsplash.com/random/100x100?4"
+    }
+  ],
+  "user": {
+    "_id": "5f68cfca0a0a698c8262c607",
+    "fullName": "Avtushenko Andrey",
+    "username": "palaxius",
+    "verified": true,
+    "avatarUrl": "https://sun1-22.userapi.com/impg/c858220/v858220335/161ece/XsqoznG5ImE.jpg?size=50x0&quality=88&crop=0,225,1344,1344&sign=2a03fddd0127ad1b107734e6a44a59b2&ava=1"
+  }
+}
