@@ -1,17 +1,18 @@
-import { call, takeEvery, takeLatest, put } from 'redux-saga/effects'
-import {FETCH_TWEETS} from "../../types";
-import {TweetsApi} from "../../../api/tweetsApi";
-import {setTweets, setTweetsLoadingState} from "./actionCreator";
+import { call, takeLatest, put } from 'redux-saga/effects'
 
-export function* fetchTweetsRequest() {
+import {TrendsApi} from "../../../api/trendsApi";
+import {setTrends, setTrendsLoadingState} from "./actionCreator";
+import {FETCH_TRENDS, LoadingState} from "../../types";
+
+export function* fetchTrendsRequest() {
   try {
-    const items = yield call(TweetsApi.fetchTweets)
-    yield put(setTweets(items))
+    const items = yield call(TrendsApi.fetchTrends)
+    yield put(setTrends(items))
   } catch (e) {
-    yield put(setTweetsLoadingState())
+    yield put(setTrendsLoadingState(LoadingState.ERROR))
   }
 }
 
-export function* tweetsSaga() {
-  yield takeLatest(FETCH_TWEETS, fetchTweetsRequest)
+export function* trendsSaga() {
+  yield takeLatest(FETCH_TRENDS, fetchTrendsRequest)
 }

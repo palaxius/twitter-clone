@@ -12,11 +12,11 @@ import BookmarkBorderIcon from '@material-ui/icons/BookmarkBorder';
 import ListAltIcon from '@material-ui/icons/ListAlt';
 import PermIdentityIcon from '@material-ui/icons/PermIdentity';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
-import {Button, Hidden} from "@material-ui/core";
+import {Button, Hidden, IconButton} from "@material-ui/core";
 import CreateIcon from '@material-ui/icons/Create';
 import TweetBox from "../TweetBox/TweetBox";
 import Modal from "../Modal/Modal";
-// import Modal from "@material-ui/core/Modal";
+import {Link} from "react-router-dom";
 
 
 
@@ -34,7 +34,11 @@ const Sidebar = () => {
 
   return (
     <div className='sidebar'>
-      <TwitterIcon className='sidebar__twitterIcon'/>
+      <Link to='/home'>
+        <IconButton className='sidebar__twitterIcon'>
+          <TwitterIcon style={{fontSize: '35px'}}/>
+        </IconButton>
+      </Link>
       <SidebarOption active text='Home' Icon={HomeIcon} />
       <SidebarOption text='Explore' Icon={SearchIcon} />
       <SidebarOption text='Notifications' Icon={NotificationsNoneIcon} />

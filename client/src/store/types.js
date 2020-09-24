@@ -6,6 +6,10 @@ export const SET_TRENDS = 'SET_TRENDS'
 export const FETCH_TRENDS = 'FETCH_TRENDS'
 export const SET_LOADING_TRENDS_STATE = 'SET_LOADING_TRENDS_STATE'
 
+export const SET_TWEET_DATA = 'SET_TWEET_DATA'
+export const FETCH_TWEET_DATA = 'FETCH_TWEET_DATA'
+export const SET_LOADING_TWEET_STATE = 'SET_LOADING_TWEET_STATE'
+
 export const LoadingState = {
   LOADED: 'LOADED',
   NEVER: 'NEVER',

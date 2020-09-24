@@ -1,15 +1,15 @@
-import {FETCH_TWEETS, SET_LOADING_STATE, SET_TWEETS} from "../../types";
+import {FETCH_TRENDS, SET_LOADING_TRENDS_STATE, SET_TRENDS} from "../../types";
 
-export const setTweets = (payload) => ({
-  type: SET_TWEETS,
+export const setTrends = (payload) => ({
+  type: SET_TRENDS,
   payload
 })
 
-export const fetchTweets = () => ({
-  type: FETCH_TWEETS
+export const fetchTrends = () => ({
+  type: FETCH_TRENDS
 })
 
-export const setTweetsLoadingState = (payload) => ({
-  type: SET_LOADING_STATE,
+export const setTrendsLoadingState = (payload) => ({
+  type: SET_LOADING_TRENDS_STATE,
   payload
 })

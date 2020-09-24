@@ -3,9 +3,10 @@
   align-items: flex-start;
   border-bottom: 1px solid var(--twitter-background);
   padding-bottom: 10px;
+  transition: all .3s ease-in-out;
 
   &__date {
-    color: #808080;
+    color: #657786;
     font-size: 16px;
     font-weight: 500;
     position: relative;
@@ -33,7 +34,7 @@
     &-username {
       font-weight: 600;
       font-size: 18px;
-      color: gray;
+      color: #657786;
       display: flex;
       align-items: center;
       padding: 0 8px;
@@ -91,5 +92,9 @@
     font-size: 20px !important;
     color: var(--twitter-color);
     padding-right: 8px;
+  }
+
+  &:hover {
+    background-color: #f5f8fa;
   }
 }

@@ -1,0 +1,50 @@
+.widgets__trends {
+  margin-bottom: 30px;
+  background-color: transparent !important;
+
+  &-item {
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      background-color: #e6ecf0;
+      cursor: pointer;
+    }
+  }
+
+  &-header {
+    padding: 13px 18px;
+    background-color: transparent !important;
+
+    h2 {
+      font-size: 20px;
+      font-weight: 800;
+    }
+  }
+}
+
+.MuiTypography-body1 {
+  font-weight: 800 !important;
+  margin-bottom: 10px !important;
+}
+
+.MuiTypography-body2 {
+  color: #8695A1;
+}
+
+.widgets__trends-text {
+  white-space: nowrap;
+  max-width: 300px;
+  overflow: hidden;
+
+  span {
+    margin: 0 !important;
+  }
+}
+
+.MuiPaper-elevation1 {
+  box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.2), 0px 0px 0px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12) !important;
+}
+
+.MuiList-padding {
+  padding: 0 !important;
+}

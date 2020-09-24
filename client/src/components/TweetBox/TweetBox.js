@@ -1,11 +1,10 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import './TweetBox.scss'
 import {Avatar, Button, IconButton} from "@material-ui/core";
 import TextareaAutosize from "@material-ui/core/TextareaAutosize";
 import ImageOutlinedIcon from '@material-ui/icons/ImageOutlined';
 import SentimentSatisfiedOutlinedIcon from '@material-ui/icons/SentimentSatisfiedOutlined';
 import CircularProgress from "@material-ui/core/CircularProgress";
-import {red} from "@material-ui/core/colors";
 
 
 const TweetBox = ({maxRows = 25, onClose = false}) => {
@@ -25,8 +24,6 @@ const TweetBox = ({maxRows = 25, onClose = false}) => {
     setProgress(0)
     setCounter(280)
     onClose && onClose()
-
-
   }
 
   return (
@@ -36,9 +33,9 @@ const TweetBox = ({maxRows = 25, onClose = false}) => {
           <Avatar className='tweetBox__header-avatar' src='https://asia.ifoam.bio/wp-content/uploads/2018/12/avatar__181424.png'/>
           <div className='tweetBox__input'>
             <TextareaAutosize
+              className={`tweetBox__input-textarea ${(progress > 100) && 'red-text'}`}
               type="text"
               placeholder="What's happening?"
-              className='tweetBox__input-textarea'
               value={text}
               onChange={progressHandler}
               rowsMax={maxRows}
@@ -57,23 +54,23 @@ const TweetBox = ({maxRows = 25, onClose = false}) => {
           <div className="tweetBox__footer-right">
             <span className='progress-counter'>{counter}</span>
                 <div className="circular-progress">
-                  <CircularProgress
-                    variant="static"
-                    value={(progress >= 100) ? 100 : progress}
-                    size={30}
-                    style={progress >= 100 && {color: 'red'}}
-                  />
-                  <CircularProgress
-                    style={{color: 'rgba(0, 0, 0, 0.1'}}
-                    variant='static'
-                    size={30}
-                    thickness={4}
-                    value={100}
-                  />
-                </div>
+                <CircularProgress
+                  variant="static"
+                  value={(progress >= 100) ? 100 : progress}
+                  size={30}
+                  style={progress >= 100 && {color: 'red'}}
+                />
+                <CircularProgress
+                  style={{color: 'rgba(0, 0, 0, 0.1'}}
+                  variant='static'
+                  size={30}
+                  thickness={4}
+                  value={100}
+                />
+              </div>
             <Button
               className='tweetBox__btn'
-              disabled={progress > 100}
+              disabled={progress > 100 || !text}
               onClick={addTweetHandler}
             >
               Tweet

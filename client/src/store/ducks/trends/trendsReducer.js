@@ -1,30 +1,30 @@
 import produce from 'immer'
-import {FETCH_TWEETS, LoadingState, SET_LOADING_STATE, SET_TWEETS} from "../../types";
+import {FETCH_TRENDS, LoadingState, SET_LOADING_TRENDS_STATE, SET_TRENDS} from "../../types";
 
-const initialTweetsState = {
+const initialTrendsState = {
   items: [],
   loadingState: LoadingState.NEVER
 }
 
-export const tweetsReducer = produce((draft, action) => {
+export const trendsReducer = produce((draft, action) => {
 
   switch (action.type) {
 
-    case SET_TWEETS:
+    case SET_TRENDS:
       draft.items = action.payload
       draft.loadingState = LoadingState.LOADED
       break;
 
-    case FETCH_TWEETS:
+    case FETCH_TRENDS:
       draft.items = []
       draft.loadingState = LoadingState.LOADING
       break;
 
-    case SET_LOADING_STATE:
+    case SET_LOADING_TRENDS_STATE:
       draft.loadingState = action.payload
       break;
 
     default:
       break;
   }
-}, initialTweetsState)
+}, initialTrendsState)

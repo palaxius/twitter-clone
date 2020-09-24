@@ -1,12 +1,12 @@
 import {createSelector} from "reselect";
 import {LoadingState} from "../../types";
 
-export const selectTweets = (state) => state.tweets
+export const selectTrends = (state) => state.trends
 
-export const selectLoadingState = (state) => selectTweets(state).loadingState
+export const selectLoadingTrendsState = (state) => selectTrends(state).loadingState
 
-export const selectIsLoading = (state) => selectLoadingState(state) === LoadingState.LOADING
+export const selectIsLoading = (state) => selectLoadingTrendsState(state) === LoadingState.LOADING
 
-export const selectIsLoaded = (state) => selectLoadingState(state) === LoadingState.LOADED
+export const selectIsLoaded = (state) => selectLoadingTrendsState(state) === LoadingState.LOADED
 
-export const selectTweetsItems = createSelector(selectTweets, (tweets) => tweets.items)
+export const selectTrendsItems = createSelector(selectTrends, (trends) => trends.items)
