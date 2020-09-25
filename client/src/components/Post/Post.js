@@ -31,7 +31,7 @@ const Post = ({text, user, _id}) => {
               <p>{text}</p>
             </div>
           </div>
-          <img src="https://cdn.jpegmini.com/user/images/slider_puffin_jpegmini_mobile.jpg" alt="post-image"/>
+          <img src="https://pbs.twimg.com/media/Eih_kDcX0AIbgbY?format=jpg&name=4096x4096" alt="post-image"/>
           <div className="post__footer">
             <ChatBubbleOutlineIcon fontSize='small' className='post__footer-icon'/>
             <RepeatIcon fontSize='small' className='post__footer-icon'/>

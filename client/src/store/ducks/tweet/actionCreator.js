@@ -1,4 +1,4 @@
-import { FETCH_TWEET_DATA, SET_LOADING_TWEET_STATE, SET_TWEET_DATA } from "../../types";
+import { FETCH_TWEET_DATA, SET_LOADING_TWEET_STATE, SET_TWEET_DATA } from "../../actionTypes";
 
 export const setTweetData = (payload) => ({
   type: SET_TWEET_DATA,

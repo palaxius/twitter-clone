@@ -1,4 +1,4 @@
-import {FETCH_TRENDS, SET_LOADING_TRENDS_STATE, SET_TRENDS} from "../../types";
+import {FETCH_TRENDS, SET_LOADING_TRENDS_STATE, SET_TRENDS} from "../../actionTypes";
 
 export const setTrends = (payload) => ({
   type: SET_TRENDS,

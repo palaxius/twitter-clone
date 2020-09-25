@@ -1,5 +1,5 @@
 import produce from 'immer'
-import {LoadingState, FETCH_TWEET_DATA, SET_LOADING_TWEET_STATE, SET_TWEET_DATA} from "../../types";
+import {LoadingState, FETCH_TWEET_DATA, SET_LOADING_TWEET_STATE, SET_TWEET_DATA} from "../../actionTypes";
 
 const initialTweetDataState = {
   data: undefined,

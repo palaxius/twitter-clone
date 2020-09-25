@@ -86,15 +86,19 @@
 
 
 button:disabled {
-  background-color: #cccccc !important;
-  color: #666666 !important;
+  background-color: #8ED0F9 !important;
+  color: #fff !important;
 }
 
 .MuiButton-root.Mui-disabled {
-  color: rgba(0, 0, 0, 0.26) !important;
+  color: #f6f5f9 !important;
 }
 
 .red-text {
   color: #E50000;
+}
+
+.MuiAlert-message {
+  margin-top: 2px;
 }
 

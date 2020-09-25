@@ -1,0 +1,151 @@
+.tweet {
+  max-width: 652px;
+  display: flex;
+  flex-direction: column;
+
+  border-bottom: 1px solid var(--twitter-background);
+  padding-bottom: 10px;
+  transition: all .3s ease-in-out;
+
+  &__date {
+    color: #778794;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    padding-left: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+
+    &::before {
+      content: '.';
+      position: absolute;
+      left: 0;
+      top: -3px;
+      height: 3px;
+      width: 3px;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__header {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+
+    &-info {
+      max-width: 500px;
+      margin-top: 5px;
+      margin-left: 10px;
+
+      h3 {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    &-username {
+      font-weight: 600;
+      font-size: 18px;
+      color: #657786;
+    }
+
+    &-text {
+      user-select: none;
+      h3 {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  &__avatar {
+    padding: 15px 10px 15px 15px;
+
+    .MuiAvatar-img {
+      height: 55px;
+      width: 55px;
+      object-fit: contain;
+      border-radius: 50%;
+    }
+  }
+
+  &__body {
+    flex: 1;
+    padding: 5px 15px 0 15px;
+
+    img {
+      margin-top: 15px;
+      margin-bottom: 10px;
+      border-radius: 20px;
+      max-width: 610px;
+      max-height: 530px;
+      object-fit: contain;
+    }
+
+    &-text {
+      font-size: 23px;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 7px;
+    border-top: 1px solid var(--twitter-background);
+    width: 100%;
+
+    &-icon {
+      cursor: pointer;
+      transition: color .2s ease-in !important;
+
+      &:hover {
+        color: var(--twitter-color)
+      }
+    }
+  }
+
+  &__feedback {
+    display: flex;
+    margin-top: 20px;
+    border-top: 1px solid var(--twitter-background);
+    padding: 20px 0;
+    text-align: center;
+
+
+    b {
+      margin-right: 6px;
+    }
+
+    &-item {
+      margin-right: 20px;
+      color: #778794;
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    &-wrapper {
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__badge {
+    font-size: 20px !important;
+    color: var(--twitter-color);
+    padding-right: 8px;
+  }
+
+  &:hover {
+    background-color: #f5f8fa;
+  }
+}
+
+.MuiSvgIcon-fontSizeSmall.tweet__footer-icon {
+  font-size: 1.5rem;
+}

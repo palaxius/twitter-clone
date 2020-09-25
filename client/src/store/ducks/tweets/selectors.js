@@ -1,9 +1,11 @@
 import {createSelector} from "reselect";
-import {LoadingState} from "../../types";
+import {LoadingState} from "../../actionTypes";
 
 export const selectTweets = (state) => state.tweets
 
 export const selectLoadingTweetsState = (state) => selectTweets(state).loadingState
+
+export const selectAddTweetState = (state) => selectTweets(state).addTweetState
 
 export const selectIsLoading = (state) => selectLoadingTweetsState(state) === LoadingState.LOADING
 

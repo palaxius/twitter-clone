@@ -1,9 +1,17 @@
 import produce from 'immer'
-import {FETCH_TWEETS, LoadingState, SET_LOADING_TWEETS_STATE, SET_TWEETS} from "../../types";
+import {
+  ADD_TWEET,
+  addTweetState, FETCH_ADD_TWEET,
+  FETCH_TWEETS,
+  LoadingState, SET_ADD_TWEET_STATE,
+  SET_LOADING_TWEETS_STATE,
+  SET_TWEETS
+} from "../../actionTypes";
 
 const initialTweetsState = {
   items: [],
-  loadingState: LoadingState.NEVER
+  loadingState: LoadingState.NEVER,
+  addTweetState: addTweetState.NEVER,
 }
 
 export const tweetsReducer = produce((draft, action) => {
@@ -22,6 +30,19 @@ export const tweetsReducer = produce((draft, action) => {
 
     case SET_LOADING_TWEETS_STATE:
       draft.loadingState = action.payload
+      break;
+
+    case FETCH_ADD_TWEET:
+      draft.addTweetState = addTweetState.LOADING
+      break;
+
+    case ADD_TWEET:
+      draft.items.splice(0, 0, action.payload)
+      draft.addTweetState = addTweetState.LOADED
+      break;
+
+    case SET_ADD_TWEET_STATE:
+      draft.addTweetState = action.payload
       break;
 
     default:

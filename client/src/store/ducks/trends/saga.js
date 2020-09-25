@@ -2,7 +2,7 @@ import { call, takeLatest, put } from 'redux-saga/effects'
 
 import {TrendsApi} from "../../../api/trendsApi";
 import {setTrends, setTrendsLoadingState} from "./actionCreator";
-import {FETCH_TRENDS, LoadingState} from "../../types";
+import {FETCH_TRENDS, LoadingState} from "../../actionTypes";
 
 export function* fetchTrendsRequest() {
   try {

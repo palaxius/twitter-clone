@@ -1,4 +1,4 @@
-import {LoadingState} from "../../types";
+import {LoadingState} from "../../actionTypes";
 
 export const selectTweet = (state) => state.tweet
 

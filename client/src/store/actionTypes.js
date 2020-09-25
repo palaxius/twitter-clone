@@ -10,7 +10,20 @@ export const SET_TWEET_DATA = 'SET_TWEET_DATA'
 export const FETCH_TWEET_DATA = 'FETCH_TWEET_DATA'
 export const SET_LOADING_TWEET_STATE = 'SET_LOADING_TWEET_STATE'
 
+
+export const FETCH_ADD_TWEET = 'FETCH_ADD_TWEET'
+export const ADD_TWEET = 'ADD_TWEET'
+export const SET_ADD_TWEET_STATE = 'SET_ADD_TWEET_STATE'
+
+
 export const LoadingState = {
+  LOADED: 'LOADED',
+  NEVER: 'NEVER',
+  LOADING: 'LOADING',
+  ERROR: 'ERROR'
+}
+
+export const addTweetState = {
   LOADED: 'LOADED',
   NEVER: 'NEVER',
   LOADING: 'LOADING',

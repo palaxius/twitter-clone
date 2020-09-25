@@ -1,5 +1,5 @@
 import {createSelector} from "reselect";
-import {LoadingState} from "../../types";
+import {LoadingState} from "../../actionTypes";
 
 export const selectTrends = (state) => state.trends
 

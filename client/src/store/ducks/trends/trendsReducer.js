@@ -1,5 +1,5 @@
 import produce from 'immer'
-import {FETCH_TRENDS, LoadingState, SET_LOADING_TRENDS_STATE, SET_TRENDS} from "../../types";
+import {FETCH_TRENDS, LoadingState, SET_LOADING_TRENDS_STATE, SET_TRENDS} from "../../actionTypes";
 
 const initialTrendsState = {
   items: [],
