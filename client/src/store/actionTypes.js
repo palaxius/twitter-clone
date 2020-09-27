@@ -15,6 +15,10 @@ export const FETCH_ADD_TWEET = 'FETCH_ADD_TWEET'
 export const ADD_TWEET = 'ADD_TWEET'
 export const SET_ADD_TWEET_STATE = 'SET_ADD_TWEET_STATE'
 
+export const SET_WHO_FOLLOW = 'SET_WHO_FOLLOW'
+export const FETCH_WHO_FOLLOW = 'FETCH_WHO_FOLLOW'
+export const SET_LOADING_WHO_FOLLOW_STATE = 'SET_LOADING_WHO_FOLLOW_STATE'
+
 
 export const LoadingState = {
   LOADED: 'LOADED',

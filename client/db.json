@@ -34,8 +34,8 @@
       "id": 3
     },
     {
-      "_id": "p6xu96stf9a",
-      "text": "asdfadsf",
+      "_id": "h4knvdaekva",
+      "text": "Work in progress...\n",
       "user": {
         "name": "Elon Musk",
         "verified": true,
@@ -43,39 +43,6 @@
         "avatarUrl": "https://pbs.twimg.com/profile_images/1295975423654977537/dHw9JcrK_bigger.jpg"
       },
       "id": 4
-    },
-    {
-      "_id": "vsh04mqfhu",
-      "text": "new post\n",
-      "user": {
-        "name": "Elon Musk",
-        "verified": true,
-        "username": "elonmusk",
-        "avatarUrl": "https://pbs.twimg.com/profile_images/1295975423654977537/dHw9JcrK_bigger.jpg"
-      },
-      "id": 5
-    },
-    {
-      "_id": "o25qt0ijhas",
-      "text": "My new post",
-      "user": {
-        "name": "Elon Musk",
-        "verified": true,
-        "username": "elonmusk",
-        "avatarUrl": "https://pbs.twimg.com/profile_images/1295975423654977537/dHw9JcrK_bigger.jpg"
-      },
-      "id": 6
-    },
-    {
-      "_id": "lxyzom9kyf8",
-      "text": "NEW NEW NEW EWN UP!",
-      "user": {
-        "name": "Elon Musk",
-        "verified": true,
-        "username": "elonmusk",
-        "avatarUrl": "https://pbs.twimg.com/profile_images/1295975423654977537/dHw9JcrK_bigger.jpg"
-      },
-      "id": 7
     }
   ],
   "trends": [

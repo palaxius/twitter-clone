@@ -5,14 +5,20 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemAvatar from "@material-ui/core/ListItemAvatar";
 import ListItemText from "@material-ui/core/ListItemText";
 import PersonAddIcon from "@material-ui/icons/PersonAdd";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
+import {fetchWhoFollow} from "../../store/ducks/whoToFollow/actionCreator";
+import {selectIsLoaded, selectWhoFollowItems} from "../../store/ducks/whoToFollow/selectors";
+import Loader from "../Loader/Loader";
+import CircularProgress from "@material-ui/core/CircularProgress";
 
 const WhoToFollow = () => {
-  // const dispatch = useDispatch()
-  //
-  // useEffect(() => {
-  //   dispatch()
-  // }, [dispatch])
+  const dispatch = useDispatch()
+  const whoFollow = useSelector(selectWhoFollowItems)
+  const isLoaded = useSelector(selectIsLoaded)
+
+  useEffect(() => {
+    dispatch(fetchWhoFollow())
+  }, [dispatch])
 
   return (
     <Paper className="widgets__trends">
@@ -20,27 +26,43 @@ const WhoToFollow = () => {
         <h2>Who to follow</h2>
       </Paper>
       <List>
-        <ListItem className='widgets__trends-item'>
-          <ListItemAvatar>
-            <Avatar
-              alt='person'
-              src='https://www.iconfinder.com/data/icons/avatars-xmas-giveaway/128/girl_female_woman_avatar-512.png'
-            />
-          </ListItemAvatar>
-          <ListItemText
-            className='widgets__trends-text'
-            primary='Dock of Shame'
-            secondary={
-              <Typography component='span' variant='body2'>
-                @FavDockOfShame
-              </Typography>
-            }
-          />
-          <Button color='primary'>
-            <PersonAddIcon />
-          </Button>
-        </ListItem>
-        <Divider component='li'/>
+        { isLoaded ?
+          whoFollow.map((follower, index) => (
+           <React.Fragment key={index}>
+             <ListItem className='widgets__trends-item'>
+               <ListItemAvatar>
+                 <Avatar
+                   alt={follower.name}
+                   src={follower.avatarUrl}
+                   className='whoFollowAvatar'
+                 />
+               </ListItemAvatar>
+               <ListItemText
+                 className='widgets__trends-text follower-name'
+                 primary={follower.name}
+                 secondary={
+                   <Typography component='span' variant='body2'>
+                     @{follower.username}
+                   </Typography>
+                 }
+               />
+               {/*<Button color='primary'>*/}
+               {/*  <PersonAddIcon />*/}
+               {/*</Button>*/}
+               <Button
+                 className='whoFollow__btn'
+               >
+                 Follow
+               </Button>
+             </ListItem>
+             <Divider component='li'/>
+           </React.Fragment>
+          ))
+          : <Loader />
+        }
+
+
+
       </List>
     </Paper>
   );

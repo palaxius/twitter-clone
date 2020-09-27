@@ -24,7 +24,7 @@ const Trends = () => {
   return (
     <Paper className="widgets__trends">
       <Paper className='widgets__trends-header'>
-        <h2>Trends for you</h2>
+        <h2>Trends</h2>
       </Paper>
       <List>
         {

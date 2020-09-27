@@ -30,7 +30,7 @@
   &__container {
     margin-top: 15px;
     margin-left: 20px;
-    padding: 20px;
+    padding: 1px;
     background-color: #f5f8fa;
     border-radius: 20px;
 
@@ -43,4 +43,39 @@
   &::-webkit-scrollbar {
     display: none;
   }
+}
+
+.whoFollow__btn {
+  background-color: transparent !important;
+  border: 1px solid var(--twitter-color) !important;
+  color: var(--twitter-color) !important;
+  font-weight: 900 !important;
+  text-transform: inherit !important;
+  border-radius: 30px !important;
+  height: 40px !important;
+  width: 80px;
+  transition: all .2s ease-in;
+  margin: 0 10px 0 auto !important;
+
+  &:hover {
+    background-color: #bcd9ea !important;
+  }
+}
+
+.follower-name {
+  padding-left: 5px;
+
+  .MuiTypography-body1 {
+    font-size: 0.9rem !important;
+  }
+}
+
+.whoFollowAvatar {
+  height: 49px !important;
+  width: 49px !important;
+  margin-right: 5px;
+}
+
+.MuiListItem-gutters {
+  padding-right: 0 !important;
 }

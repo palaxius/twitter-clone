@@ -1,10 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './SidebarOption.scss'
 import {Hidden} from "@material-ui/core";
 
-const SidebarOption = ({active, text, Icon}) => {
+const SidebarOption = ({ text, Icon}) => {
+
   return (
-    <div className={`sidebar__option ${active && 'sidebar__option-active'}`}>
+    <div className='sidebar__option' >
       <Icon />
       <Hidden smDown>
         <h2>{text}</h2>

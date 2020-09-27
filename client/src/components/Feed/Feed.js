@@ -12,6 +12,8 @@ import {Route} from "react-router-dom";
 import {IconButton} from "@material-ui/core";
 import Tweet from "../Tweet/Tweet";
 import NotFound from "../NotFound/NotFound";
+import Trends from "../Trends/Trends";
+import SearchIcon from "@material-ui/icons/Search";
 
  const Feed = () => {
   const dispatch = useDispatch()
@@ -25,6 +27,7 @@ import NotFound from "../NotFound/NotFound";
   return (
     <div className='feed'>
       <div className="feed__header-wrapper">
+
 
         <Route path='/home/:any'>
           <IconButton
@@ -53,7 +56,41 @@ import NotFound from "../NotFound/NotFound";
           <div className='add__border'/>
         </Route>
 
-        <Route path='/home' exact>
+      <Route path='/notifications' exact>
+        <div className="feed__header-wrapper">
+         <h2 className='feed__header'>Notifications</h2>
+        </div>
+      </Route>
+
+      <Route path='/explore' exact>
+        <div className="explore__input">
+          <div className="widgets__input">
+            <SearchIcon className='widgets__searchIcon'/>
+            <input type="text" placeholder='Search Twitter'/>
+          </div>
+        </div>
+        <Trends title='Trends'/>
+      </Route>
+
+      <Route path='/messages' exact>
+        <div className="feed__header-wrapper">
+          <h2 className='feed__header'>Messages</h2>
+        </div>
+      </Route>
+
+      <Route path='/bookmarks' exact>
+        <div className="feed__header-wrapper">
+          <h2 className='feed__header'>Bookmarks</h2>
+        </div>
+      </Route>
+
+      <Route path='/lists' exact>
+        <div className="feed__header-wrapper">
+          <h2 className='feed__header'>Lists</h2>
+        </div>
+      </Route>
+
+      <Route path={['/home', '/profile']} exact>
           { isLoading
             ? <Loader />
             : tweets.map((tweet) => (
@@ -64,9 +101,8 @@ import NotFound from "../NotFound/NotFound";
             ))}
         </Route>
 
-        <Route path='/home/tweet/:id' component={Tweet} exact />
+      <Route path='/home/tweet/:id' component={Tweet} exact />
 
-        {/*<Route component={NotFound} />*/}
     </div>
   );
 };

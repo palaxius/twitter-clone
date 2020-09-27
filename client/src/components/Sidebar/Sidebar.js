@@ -3,6 +3,11 @@ import React, {useState} from 'react';
 import './Sidebar.scss'
 
 import SidebarOption from "../SidebarOption/SidebarOption";
+import TweetBox from "../TweetBox/TweetBox";
+import Modal from "../Modal/Modal";
+import {Link} from "react-router-dom";
+
+
 import HomeIcon from '@material-ui/icons/Home';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import SearchIcon from '@material-ui/icons/Search';
@@ -14,14 +19,9 @@ import PermIdentityIcon from '@material-ui/icons/PermIdentity';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import {Button, Hidden, IconButton} from "@material-ui/core";
 import CreateIcon from '@material-ui/icons/Create';
-import TweetBox from "../TweetBox/TweetBox";
-import Modal from "../Modal/Modal";
-import {Link} from "react-router-dom";
-
-
+import NavLink from "../NavLink/NavLink";
 
 const Sidebar = () => {
-
   const [openModal, setOpenModal] = useState(false)
 
   const openModalHandler = () => {
@@ -32,21 +32,46 @@ const Sidebar = () => {
     setOpenModal(false)
   }
 
+  const currentLocation = window.location.pathname
+
   return (
     <div className='sidebar'>
+
       <Link to='/home'>
         <IconButton className='sidebar__twitterIcon'>
           <TwitterIcon style={{fontSize: '35px'}}/>
         </IconButton>
       </Link>
-      <SidebarOption active text='Home' Icon={HomeIcon} />
-      <SidebarOption text='Explore' Icon={SearchIcon} />
-      <SidebarOption text='Notifications' Icon={NotificationsNoneIcon} />
-      <SidebarOption text='Messages' Icon={MailOutlineOutlinedIcon} />
-      <SidebarOption text='Bookmarks' Icon={BookmarkBorderIcon} />
-      <SidebarOption text='Lists' Icon={ListAltIcon} />
-      <SidebarOption text='Profile' Icon={PermIdentityIcon} />
-      <SidebarOption text='More' Icon={MoreHorizIcon} />
+
+      <NavLink to={'/home'}>
+        <SidebarOption text='Home' Icon={HomeIcon} />
+      </NavLink>
+
+      <NavLink to='/explore' >
+        <SidebarOption text='Explore' Icon={SearchIcon} />
+      </NavLink>
+
+      <NavLink to='/notifications' >
+        <SidebarOption text='Notifications' Icon={NotificationsNoneIcon} />
+      </NavLink>
+
+      <NavLink to='/messages'>
+        <SidebarOption text='Messages' Icon={MailOutlineOutlinedIcon} />
+      </NavLink>
+
+      <NavLink to='/bookmarks'>
+        <SidebarOption text='Bookmarks' Icon={BookmarkBorderIcon} />
+      </NavLink>
+
+      <NavLink to='/lists'>
+        <SidebarOption text='Lists' Icon={ListAltIcon} />
+      </NavLink>
+
+      <NavLink to='/profile'>
+        <SidebarOption text='Profile' Icon={PermIdentityIcon} />
+      </NavLink>
+
+        <SidebarOption text='More' Icon={MoreHorizIcon} />
       <Button
         variant='outlined'
         className='sidebar__btn'

@@ -6,12 +6,13 @@
   border-radius: 30px;
 
   .MuiSvgIcon-root {
-    padding: 20px;
+    padding: 12px 20px;
+    font-size: 2rem;
   }
 
   h2 {
-    font-weight: 800;
-    font-size: 20px;
+    font-weight: 700;
+    font-size: 19px;
     margin-right: 20px;
   }
 
@@ -21,7 +22,11 @@
     color: var(--twitter-color)
   }
 
-  &-active {
-    color: var(--twitter-color)
-  }
+  //&-active {
+  //  color: var(--twitter-color)
+  //}
+}
+
+.sidebar .active {
+  color: var(--twitter-color)
 }

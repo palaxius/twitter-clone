@@ -76,8 +76,8 @@
   &__footer {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
-    margin-right: 70px;
+    margin-right: 80px;
+    margin-top: 5px;
 
     &-icon {
       cursor: pointer;
@@ -98,4 +98,18 @@
   &:hover {
     background-color: #f5f8fa;
   }
+}
+
+.MuiIconButton-root.post__footer-icon {
+  padding: 10px;
+}
+
+.favorite-icon {
+  position: relative;
+}
+
+.likes-counter {
+  right: -20px;
+  position: absolute;
+  font-size: 15px;
 }

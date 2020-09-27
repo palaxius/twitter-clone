@@ -1,6 +1,6 @@
 import React from 'react';
 import './Post.scss'
-import {Avatar} from "@material-ui/core";
+import {Avatar, IconButton} from "@material-ui/core";
 import VerifiedUserIcon from '@material-ui/icons/VerifiedUser';
 import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
 import RepeatIcon from '@material-ui/icons/Repeat';
@@ -8,7 +8,13 @@ import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import PublishIcon from '@material-ui/icons/Publish';
 import {Link} from "react-router-dom";
 
+
 const Post = ({text, user, _id}) => {
+
+  const randomLikesCounterGenerator = () => {
+    return Math.round(Math.random() * 100)
+  }
+
   return (
     <Link to={`/home/tweet/${_id}`}>
       <div className='post'>
@@ -33,10 +39,19 @@ const Post = ({text, user, _id}) => {
           </div>
           <img src="https://pbs.twimg.com/media/Eih_kDcX0AIbgbY?format=jpg&name=4096x4096" alt="post-image"/>
           <div className="post__footer">
-            <ChatBubbleOutlineIcon fontSize='small' className='post__footer-icon'/>
-            <RepeatIcon fontSize='small' className='post__footer-icon'/>
-            <FavoriteBorderIcon fontSize='small' className='post__footer-icon'/>
-            <PublishIcon fontSize='small' className='post__footer-icon'/>
+            <IconButton className='post__footer-icon' onClick={() => alert(123)}>
+              <ChatBubbleOutlineIcon fontSize='small' />
+            </IconButton>
+            <IconButton className='post__footer-icon'>
+              <RepeatIcon fontSize='small' />
+            </IconButton>
+            <IconButton className='post__footer-icon favorite-icon'>
+              <FavoriteBorderIcon fontSize='small' />
+              <span className='likes-counter'>{randomLikesCounterGenerator()}</span>
+            </IconButton>
+            <IconButton className='post__footer-icon'>
+              <PublishIcon fontSize='small' />
+            </IconButton>
           </div>
         </div>
       </div>
