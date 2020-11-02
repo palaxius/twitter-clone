@@ -6,7 +6,7 @@ import {setTweetData, setTweetLoadingState } from "./actionCreator";
 export function* fetchTweetDataRequest({payload: tweetId}) {
   try {
     const data = yield call(TweetsApi.fetchTweetData, tweetId)
-    yield put(setTweetData(data[0]))
+    yield put(setTweetData(data))
   } catch (e) {
     yield put(setTweetLoadingState(LoadingState.ERROR))
   }

@@ -11,7 +11,16 @@ import {createTweetValidations} from "./validations/createTweet";
 
 const app = express()
 
+const allowCrossDomain = function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,PATCH');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+
+  next();
+}
+
 app.use(express.json())
+app.use(allowCrossDomain)
 app.use(passport.initialize())
 
 app.get('/users', UserCtrl.index)
@@ -21,6 +30,7 @@ app.get('/users/:id', UserCtrl.show)
 app.get('/tweets', TweetsCtrl.index)
 app.get('/tweets/:id', TweetsCtrl.show)
 app.post('/tweets', passport.authenticate('jwt'), createTweetValidations, TweetsCtrl.create)
+app.patch('/tweets/:id', passport.authenticate('jwt'), createTweetValidations, TweetsCtrl.update)
 app.delete('/tweets/:id', passport.authenticate('jwt'), TweetsCtrl.delete)
 
 app.get('/auth/verify', registerValidations, UserCtrl.verify)

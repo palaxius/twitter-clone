@@ -13,6 +13,7 @@ import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
 import RepeatIcon from "@material-ui/icons/Repeat";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import PublishIcon from "@material-ui/icons/Publish";
+import format from 'date-fns/format'
 
 const Tweet = () => {
   const dispatch = useDispatch()
@@ -20,6 +21,8 @@ const Tweet = () => {
   const id = params.id
   const tweetData = useSelector(selectTweetData)
   const isLoaded = useSelector(selectIsLoaded)
+
+  console.log(tweetData)
 
   useEffect(() => {
     if (id) {
@@ -37,7 +40,7 @@ const Tweet = () => {
         <div className="tweet__header">
           <Avatar src={tweetData.user.avatarUrl} className='tweet__avatar'/>
           <div className="tweet__header-info">
-              <h3>{tweetData.user.name}&nbsp;
+              <h3>{tweetData.user.fullname}&nbsp;
                 {tweetData.user.verified && <VerifiedUserIcon className='tweet__badge'/>}
               </h3>
               <span className='tweet__header-username'>
@@ -50,7 +53,7 @@ const Tweet = () => {
               <p>{tweetData.text}</p>
             </div>
           <img src="https://pbs.twimg.com/media/Eih_kDcX0AIbgbY?format=jpg&name=4096x4096" alt="post-image"/>
-          <span className='tweet__date'>8:42 AM&nbsp;·&nbsp;Aug 27, 2020&nbsp;·&nbsp;Twitter for iPhone</span>
+          <span className='tweet__date'>{format(new Date(tweetData.createdAt), 'H:mm')}&nbsp;·&nbsp;{format(new Date(tweetData.createdAt), 'dd MMM, y')}&nbsp;·&nbsp;Twitter for Web</span>
           <div className="tweet__feedback">
             <div className='tweet__feedback-wrapper'>
               <b>5.3K</b><span className='tweet__feedback-item'>Retweets</span>

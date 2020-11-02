@@ -12,19 +12,9 @@ export function* fetchTweetsRequest() {
   }
 }
 
-export function* fetchAddTweetRequest({ payload }) {
+export function* fetchAddTweetRequest({ payload: text }) {
   try {
-    const data = {
-      _id: Math.random().toString(36).substr(2),
-      text: payload,
-      user: {
-        name: "Elon Musk",
-        verified: true,
-        username: "elonmusk",
-        avatarUrl: "https://pbs.twimg.com/profile_images/1295975423654977537/dHw9JcrK_bigger.jpg"
-      }
-    }
-    const item = yield call(TweetsApi.addTweet, data)
+    const item = yield call(TweetsApi.addTweet, text)
     yield put(addTweet(item))
   } catch (e) {
     yield put(setAddTweetState(addTweetState.ERROR))

@@ -5,7 +5,7 @@ import {validationResult} from "express-validator";
 class TweetsController {
   async index(_, res) {
     try {
-      const tweets = await TweetModel.find({}).exec()
+      const tweets = await TweetModel.find({}).populate('user').sort({'createdAt': '-1'}).exec()
 
       res.json({
         status: 'success',
@@ -29,7 +29,7 @@ class TweetsController {
         return
       }
 
-      const tweet = await TweetModel.findById(tweetId).exec()
+      const tweet = await TweetModel.findById(tweetId).populate('user').exec()
 
       if (!tweet) {
         res.status(404).send()
@@ -69,7 +69,7 @@ class TweetsController {
 
         res.json({
           status: 'success',
-          data: tweet
+          data: await tweet.populate('user').execPopulate()
         })
       }
     } catch (error) {
@@ -97,6 +97,41 @@ class TweetsController {
         if (tweet) {
           if (tweet.user._id.toString() === user._id.toString()) {
             tweet.remove()
+            res.send()
+          } else {
+            res.status(403).send()
+          }
+        } else {
+          res.status(404).send()
+        }
+      }
+    } catch (error) {
+      res.status(500).json({
+        status: 'error',
+        message: error
+      })
+    }
+  }
+
+  async update(req, res) {
+    const user = req.user
+
+    try {
+      if (user) {
+        const tweetId = req.params.id
+
+        if (!isValidObjectId(tweetId)) {
+          res.status(400).send()
+          return
+        }
+
+        const tweet = await TweetModel.findById(tweetId)
+
+        if (tweet) {
+          if (tweet.user._id.toString() === user._id.toString()) {
+            const text = req.body.text
+            tweet.text = text
+            tweet.save()
             res.send()
           } else {
             res.status(403).send()

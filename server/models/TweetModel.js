@@ -11,6 +11,8 @@ const TweetSchema = new Schema({
     ref: 'User',
     type: Schema.Types.ObjectId
   }
+}, {
+  timestamps: true
 })
 
 export const TweetModel = model('Tweet', TweetSchema)

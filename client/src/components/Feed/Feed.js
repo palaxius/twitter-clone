@@ -93,7 +93,7 @@ import SearchIcon from "@material-ui/icons/Search";
       <Route path={['/home', '/profile']} exact>
           { isLoading
             ? <Loader />
-            : tweets.map((tweet) => (
+            : tweets && tweets.map((tweet) => (
               <Post
                 {...tweet}
                 key={tweet._id}
@@ -101,7 +101,7 @@ import SearchIcon from "@material-ui/icons/Search";
             ))}
         </Route>
 
-      <Route path='/home/tweet/:id' component={Tweet} exact />
+      <Route path='/home/tweets/:id' component={Tweet} exact />
 
     </div>
   );

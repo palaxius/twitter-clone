@@ -22,10 +22,10 @@
     }
   }
 
-
-
   &__header {
     margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
 
     &-description {
       max-width: 500px;
